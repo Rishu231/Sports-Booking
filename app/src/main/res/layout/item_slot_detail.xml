@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/slot_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/slot_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/stimeheader"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Start Time" />
+
+            <TextView
+                android:id="@+id/start_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Time" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/slot_end_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/etimeheader"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="End Time" />
+
+            <TextView
+                android:id="@+id/end_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Time" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/price_t"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Price" />
+
+            <TextView
+                android:id="@+id/price_txt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Rs" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

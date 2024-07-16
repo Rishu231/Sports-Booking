@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="red_light">#80FF0000</color> <!-- 50% transparent red -->
+    <color name="red_medium">#CCFF0000</color> <!-- 80% transparent red -->
+    <color name="red_dark">#FFFF0000</color> <!-- Fully opaque red -->
+    <color name="green_light">#8000FF00</color> <!-- 50% transparent green -->
+    <color name="green_medium">#CC00FF00</color> <!-- 80% transparent green -->
+    <color name="green_dark">#FF00FF00</color> <!-- Fully opaque green -->
+
+</resources>
