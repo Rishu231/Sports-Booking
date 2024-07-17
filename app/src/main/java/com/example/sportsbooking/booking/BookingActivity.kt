@@ -8,7 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.sportsbooking.R
 import com.example.sportsbooking.booking.view.IBookView
-import com.example.sportsbooking.model.BookingResponse
+import com.example.sportsbooking.model.ResponseData
 import com.example.sportsbooking.model.Slots
 import com.example.sportsbooking.model.SlotRequestData
 import com.google.gson.Gson
@@ -53,9 +53,9 @@ class BookingActivity : AppCompatActivity(), IBookView {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-    override fun turfBooked(response: BookingResponse) {
+    override fun turfBooked(response: ResponseData) {
 //        Log.e("qwertyuiop----", response.toString())
-        Toast.makeText(this, "Turf booked successfully! Order ID: ${response.response.order_id}", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Turf booked successfully! Order ID: ${response.order_id}", Toast.LENGTH_SHORT).show()
 
     }
 
@@ -70,15 +70,17 @@ class BookingActivity : AppCompatActivity(), IBookView {
 //        Toast.makeText(this, slots.toString(), Toast.LENGTH_SHORT).show()
         val requestData = SlotRequestData(
             slots = slots,
-            user_first_name = first_input_txt.text.toString(),
-            user_last_name = last_input_txt.text.toString(),
-            user_email = email_input_txt.text.toString(),
-            user_dial_code = dial_code_txt.text.toString(),
-            user_mobile_no = dial_number_txt.text.toString()
+            user_first_name = "abcv",
+            user_last_name = "abvc",
+            user_email = "apvx@gmail.com",
+            user_dial_code = "+91",
+            user_mobile_no = "6789543201"
+//            user_first_name = first_input_txt.text.toString(),
+//            user_last_name = last_input_txt.text.toString(),
+//            user_email = email_input_txt.text.toString(),
+//            user_dial_code = dial_code_txt.text.toString(),
+//            user_mobile_no = dial_number_txt.text.toString()
         )
-        Log.e("qwertyuiop----", requestData.toString())
-        val gson = Gson()
-        Log.d("SlotRequestData", gson.toJson(requestData))
         presenter.BookTurf(requestData)
 
     }

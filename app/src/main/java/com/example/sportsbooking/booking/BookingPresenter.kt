@@ -18,19 +18,16 @@ class BookingPresenter(private var view: IBookView) : IBookPresenter {
                 val response = ApiClient.apiService.bookSlot(dat)
                 if (response.success) {
                     withContext(Dispatchers.Main) {
-                        Log.e("1234566778", response.response.toString())
                         view.turfBooked(response.response)
                     }
                 } else {
                     withContext(Dispatchers.Main) {
-                        Log.e("error1234566778", response.response.toString())
-                        view.showError(response.message)
+                        view.showError(response.error)
                     }
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
-                    Log.e("error12345667782", e.message.toString())
-                    view.showError(e.message ?: "Error fetching venues")
+                    view.showError(e.cause?.message ?: "Error fetching venues")
                 }
             }
         }

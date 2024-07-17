@@ -1,8 +1,8 @@
 package com.example.sportsbooking.booking.view
 
-import com.example.sportsbooking.model.BookingResponse
+import com.example.sportsbooking.model.ResponseData
 
 interface IBookView {
     fun showError(s: String)
-    fun turfBooked(response: BookingResponse)
+    fun turfBooked(response: ResponseData)
 }

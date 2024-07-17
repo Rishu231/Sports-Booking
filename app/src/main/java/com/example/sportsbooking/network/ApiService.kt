@@ -29,7 +29,7 @@ interface ApiService {
     suspend fun getTurfsAvailableSlot(@Query("turf_id") turf_id: Int, @Query("date") date: String): ApiResponse<List<Slotdata>>
 
     @POST("/vendor/venue/v1/bookslot")
-    suspend fun bookSlot(@Body slots: SlotRequestData): ApiResponse<BookingResponse>
+    suspend fun bookSlot(@Body slots: SlotRequestData): BookingResponse
 
 
 

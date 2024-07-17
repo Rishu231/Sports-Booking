@@ -6,11 +6,13 @@ data class BookingResponse(
     val code: Int,
     val success: Boolean,
     val message: String,
+    val error: String,
     val response: ResponseData,
-    val metadata: List<Any>,
+    val metadata: Metadata,
     val requestLocation: String
 )
 
 data class ResponseData(
     val order_id: String
 )
+
