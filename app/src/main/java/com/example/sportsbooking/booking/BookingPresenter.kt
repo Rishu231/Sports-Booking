@@ -33,24 +33,25 @@ class BookingPresenter(private var view: IBookView) : IBookPresenter {
         }
     }
 
-//    override fun loadTurfSlots(turfId: Int, date: String ) {
-//        CoroutineScope(Dispatchers.IO).launch {
-//            try {
-//                val response = ApiClient.apiService.getTurfsAvailableSlot(turfId, date)
-//                if (response.success) {
-//                    withContext(Dispatchers.Main) {
-//                        view.showSlots(response.response)
-//                    }
-//                } else {
-//                    withContext(Dispatchers.Main) {
-//                        view.showError(response.message)
-//                    }
-//                }
-//            } catch (e: Exception) {
-//                withContext(Dispatchers.Main) {
-//                    view.showError(e.message ?: "Error fetching venues")
-//                }
-//            }
-//        }
-//    }
+    override fun showOrderDetails(orderId: String) {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                val response = ApiClient.apiService.getOrderDetails(orderId)
+                if (response.success) {
+                    withContext(Dispatchers.Main) {
+                        view.orderDetails(response.response)
+                    }
+                } else {
+                    withContext(Dispatchers.Main) {
+                        view.showError(response.message)
+                    }
+                }
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    view.showError(e.message ?: "Error fetching venues")
+                }
+            }
+        }
+    }
+
 }

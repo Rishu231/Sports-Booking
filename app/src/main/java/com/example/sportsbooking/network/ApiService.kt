@@ -2,6 +2,7 @@ package com.example.sportsbooking.network
 
 import com.example.sportsbooking.model.ApiResponse
 import com.example.sportsbooking.model.BookingResponse
+import com.example.sportsbooking.model.OrderDetails
 import com.example.sportsbooking.model.Slotdata
 import com.example.sportsbooking.model.SlotRequestData
 import com.example.sportsbooking.model.SportsModel
@@ -30,6 +31,9 @@ interface ApiService {
 
     @POST("/vendor/venue/v1/bookslot")
     suspend fun bookSlot(@Body slots: SlotRequestData): BookingResponse
+
+    @GET("/vendor/venue/v1/orderdetails")
+    suspend fun getOrderDetails(@Query("order_id") order_id: String): ApiResponse<List<OrderDetails>>
 
 
 
